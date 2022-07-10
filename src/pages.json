@@ -1,0 +1,67 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/tools/tools",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"list": [{
+				"iconPath": "static/tab/Home.png",
+				"selectedIconPath": "static/tab/actHome.png",
+				"pagePath": "pages/home/home"
+
+			},
+			{
+				"iconPath": "static/tab/Tools.png",
+				"selectedIconPath": "static/tab/actTools.png",
+				"pagePath": "pages/tools/tools"
+			},
+			{
+				"iconPath": "static/tab/Msg.png",
+				"selectedIconPath": "static/tab/actMsg.png",
+				"pagePath": "pages/message/message"
+			},
+			{
+				"iconPath": "static/tab/Profile.png",
+				"selectedIconPath": "static/tab/actProfile.png",
+				"pagePath": "pages/profile/profile"
+			}
+		]
+	}
+}
