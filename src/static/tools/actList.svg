@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.428" height="31.432" viewBox="0 0 31.428 31.432">
+  <g id="book" transform="translate(-0.05)">
+    <rect id="矩形_31" data-name="矩形 31" width="8.162" height="30.317" rx="0.5" transform="translate(0.55 0.5)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <rect id="矩形_32" data-name="矩形 32" width="8.162" height="25.652" rx="0.5" transform="translate(8.712 5.164)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <rect id="矩形_33" data-name="矩形 33" width="6.996" height="25.652" rx="0.5" transform="translate(17.857 5.941) rotate(-14.05)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="直线_56" data-name="直线 56" x2="8.162" transform="translate(0.55 22.654)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="直线_57" data-name="直线 57" x2="8.162" transform="translate(8.712 20.322)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="直线_58" data-name="直线 58" y1="1.679" x2="6.716" transform="translate(22.704 23.307)" fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

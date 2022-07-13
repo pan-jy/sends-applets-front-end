@@ -127,8 +127,9 @@
 					:class="{'fab-rotate':fabClick,'fab-contrarotate':!fabClick}">
 					<u-icon name="plus" size="7vw" color="#fff"></u-icon>
 				</view>
-				<view class="fab-content flex-row" v-if="fabClick">
-					<view class="fab-content-item flex-col" @click="backHome">
+				<view class="fab-content flex-row"
+					:class="{'fab-content-expand':fabClick,'fab-content-shrink':!fabClick}">
+					<view class="fab-content-item flex-col" style="margin-left: 6vw;" @click="backHome">
 						<u-icon name="home" size="6vw"></u-icon>
 						<text class="grid-text" style="font-size: 10px;">返回首页</text>
 					</view>
@@ -144,8 +145,7 @@
 
 <script>
 	import {
-		uniCard,
-		uniFab
+		uniCard
 	} from '@dcloudio/uni-ui'
 
 	export default {
@@ -159,16 +159,16 @@
 				currentIndex: Number(new Date().getDay() - 1),
 				selected: false,
 				baseList: [{
-					src: '../../static/home/music.svg',
+					src: '../../static/tools/music.svg',
 					title: '点歌台'
 				}, {
-					src: '../../static/home/grade.svg',
+					src: '../../static/tools/grade.svg',
 					title: '成绩查询'
 				}, {
-					src: '../../static/home/bus.svg',
+					src: '../../static/tools/bus.svg',
 					title: '校园小蓝'
 				}, {
-					src: '../../static/home/navigation.svg',
+					src: '../../static/tools/navigation.svg',
 					title: '校内导航'
 				}],
 				rowsHeight: ['15vh'],
@@ -202,8 +202,7 @@
 			})
 		},
 		components: {
-			uniCard,
-			uniFab
+			uniCard
 		},
 		computed: {
 			year() {
@@ -325,11 +324,6 @@
 </script>
 
 <style lang="scss">
-	.content {
-		min-height: 100%;
-		background-image: linear-gradient(to bottom, #fff, #ecf5ff);
-	}
-
 	.margin-b {
 		margin-bottom: 4vh;
 	}
@@ -423,15 +417,25 @@
 	}
 
 	.fab-content {
-		position: absolute;
+		position: fixed;
 		right: 12.5%;
 		bottom: 5%;
 		height: 13vw;
-		padding: 0 6.5% 0 5.5%;
+		width: 0%;
 		background-color: #fff;
+		overflow: hidden;
 		border-top-left-radius: 55px;
 		border-bottom-left-radius: 55px;
 		box-shadow: 0 1px 5px 2px rgb(0 0 0 / 30%);
+		transition: width .2s linear;
+	}
+
+	.fab-content-expand {
+		width: 41vw;
+	}
+
+	.fab-content-shrink {
+		width: 0%;
 	}
 
 	.fab-content-item {

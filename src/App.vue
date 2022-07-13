@@ -18,6 +18,11 @@
 	page {
 		height: 100%;
 	}
+	
+	.content {
+		min-height: 100%;
+		background-image: linear-gradient(to bottom, #fff, #ecf5ff);
+	}
 
 	::-webkit-scrollbar {
 		display: none;
