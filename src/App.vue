@@ -21,7 +21,7 @@
 	
 	.content {
 		min-height: 100%;
-		background-image: linear-gradient(to bottom, #fff, #ecf5ff);
+		background-image: linear-gradient(to bottom, #fff, #f8fafc);
 	}
 
 	::-webkit-scrollbar {

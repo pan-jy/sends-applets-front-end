@@ -117,13 +117,14 @@
 	}
 
 	.item-icon {
-		height: 7vh;
+		height: 5vh;
 		width: 20vw;
 		margin-bottom: 1vh;
 	}
 
 	.item-text {
-		font-size: 16px;
+		font-size: 15px;
 		margin-bottom: 4vw;
+		color: #606266;
 	}
 </style>

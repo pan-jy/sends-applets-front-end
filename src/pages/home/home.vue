@@ -55,7 +55,8 @@
 				<uni-card>
 					<view style="margin: 2vw 0 1vh 0;">
 						<u-grid :border="false" :col="4">
-							<u-grid-item v-for="(listItem,baseListIndex) in baseList" :key="baseListIndex">
+							<u-grid-item v-for="(listItem,baseListIndex) in baseList" :key="baseListIndex"
+								@click="navClick(baseListIndex)">
 								<image :src="listItem.src" mode="scaleToFill"
 									style="height: 5vh;width: 20vw;margin-bottom: 1vh;"></image>
 								<text class="grid-text" style="font-size: 15px;">{{listItem.title}}</text>
@@ -121,9 +122,24 @@
 				</view>
 			</view>
 		</view>
-		<view class="classSchedule" v-else>
-			<view class="flex-row">
-				<view class="fab flex-row" @click="fabClick = !fabClick"
+		<view v-else>
+			<!-- <view class="schedule flex-col">
+				<view class="s_time">08:00</view>
+				<view class="s_time">08:55</view>
+				<view class="s_time">10:00</view>
+				<view class="s_time">10:55</view>
+				<view class="s_time">11:45</view>
+				<view class="s_time">14:30</view>
+				<view class="s_time">15:25</view>
+				<view class="s_time">16:20</view>
+				<view class="s_time">17:15</view>
+				<view class="s_time">18:20</view>
+				<view class="s_time">19:10</view>
+				<view class="s_time">20:05</view>
+				<view class="s_time">20:55</view>
+			</view> -->
+			<view class="fab flex-row">
+				<view class="fab-btn flex-row" @click="fabClick = !fabClick"
 					:class="{'fab-rotate':fabClick,'fab-contrarotate':!fabClick}">
 					<u-icon name="plus" size="7vw" color="#fff"></u-icon>
 				</view>
@@ -175,7 +191,7 @@
 				loading: true,
 				marketItemList: [{
 					name: '李华',
-					avatar: '../../static/tab/profile.png',
+					avatar: '/static/avatar.png',
 					content: '遗忘是一般刚强的，有创造力的人的法宝，他们会像自然一样的遗忘，自然界就不知道有什么过失，弱者不是把痛苦作为惩前毖后的教训，反而在痛苦中讨生活，浸在里头，天天回顾以往的苦难，折磨自己。——巴尔扎克',
 					type: '打听求助',
 					time: '1656470528000',
@@ -184,7 +200,7 @@
 					star: '4'
 				}, {
 					name: '小明',
-					avatar: '../../static/tab/profile.png',
+					avatar: '/static/avatar.png',
 					content: '感到自己是人们所需要的和亲近的人——这是生活最大的享受，最高的喜悦。这是真理，不要忘记这个真理，它会给你们无限的幸福。——高尔基',
 					type: '打听求助',
 					time: '1656480528000',
@@ -318,6 +334,22 @@
 			},
 			addTransaction() {
 				console.log("添加事务")
+			},
+			navClick(index) {
+				console.log(index)
+				switch (index){
+					case 0:
+						break;
+					case 1:
+						uni.navigateTo({
+							url: "../linkOthers?url=" + encodeURIComponent('https://apps.hqu.edu.cn/wechat-hqu/index.html')
+						});
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+				}
 			}
 		}
 	}
@@ -392,7 +424,7 @@
 		border: #398ade 1px solid;
 	}
 
-	.fab {
+	.fab-btn {
 		width: 13vw;
 		height: 13vw;
 		background-color: #398ade;
@@ -444,4 +476,13 @@
 		align-items: center;
 		margin: 1vw;
 	}
+
+	// .schedule {
+	// 	padding: 0 0 0 30px;
+	// 	font-size: 20px;
+	// }
+
+	// .s_time{
+	// 	margin: 2vw;
+	// }
 </style>
